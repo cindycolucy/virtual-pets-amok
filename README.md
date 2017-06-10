@@ -50,3 +50,4 @@ Adds pets to the shelter (one of each type).
 Includes methods to decrease health if the litter box gets too full or the cages get too messy.
 Switch case calling each method as the user selects.
 Write line method.
+# virtual-pets-amok
