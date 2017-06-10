@@ -39,6 +39,16 @@ package virtualpetamok;
 						}
 					}
 				}
+				for (VirtualPet pet : shelter.pets()) {
+					if (pet instanceof RoboticPet) {
+
+						if (((RoboticPet) pet).getOilLevel() <= 10) {
+							writeLine("The robotic pet " + pet.getName()
+									+ "needs oil and is currently negatively affecting their health.");
+							((RoboticPet) pet).decreaseHealth();
+						}
+					}
+				}
 
 				writeLine("\nThank you for volunteering at the animal shelter!");
 				writeLine("\nThis is the status of your pets: ");

@@ -1,9 +1,9 @@
 package virtualpetamok;
 
-public class RoboCat extends Cat implements RoboticPet{
+public class RoboCat extends Cat implements RoboticPet {
 
 	int oilLevel;
-	
+
 	public RoboCat(String nameParam, String descriptionParam) {
 		super(nameParam, descriptionParam);
 		oilLevel = 50;
@@ -34,7 +34,7 @@ public class RoboCat extends Cat implements RoboticPet{
 	@Override
 	public void tick() {
 		mood -= (5 + generateRandom());
-		oilLevel -= (5 + generateRandom());	
+		oilLevel -= (5 + generateRandom());
 
 	}
 
@@ -50,12 +50,18 @@ public class RoboCat extends Cat implements RoboticPet{
 
 	@Override
 	public int getOilLevel() {
-		return oilLevel;		
+		return oilLevel;
 	}
 
 	@Override
-		public void recharge() {
-			mood += 10;
-			health += 10;
-		}		
+	public void recharge() {
+		mood += 10;
+		health += 10;
 	}
+
+	@Override
+	public void decreaseHealth() {
+		health -= 10;
+
+	}
+}

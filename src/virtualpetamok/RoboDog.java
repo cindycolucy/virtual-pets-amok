@@ -39,7 +39,7 @@ public class RoboDog extends Dog implements RoboticPet {
 	@Override
 	public void tick() {
 		mood -= (5 + generateRandom());
-		oilLevel -= (5 + generateRandom());	
+		oilLevel -= (5 + generateRandom());
 	}
 
 	@Override
@@ -61,6 +61,12 @@ public class RoboDog extends Dog implements RoboticPet {
 	public void recharge() {
 		mood += 10;
 		health += 10;
+	}
+
+	@Override
+	public void decreaseHealth() {
+		health -= 10;
+
 	}
 
 }
