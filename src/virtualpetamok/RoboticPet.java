@@ -6,13 +6,15 @@ public interface RoboticPet {
 
 	int getOilLevel();
 
-	// Methods for maintaining a robotic pet
+	// oil pet method for a robotic pet
 	void oilPet();
 
+	// recharge method for a robotic pet
 	void recharge();
 
 	// Tick for robotic pets
 	void tick();
 
+	// decrease health for robotic pets
 	void decreaseHealth();
 }

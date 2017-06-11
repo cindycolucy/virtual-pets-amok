@@ -5,22 +5,24 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class VirtualPetShelter {
-	//Declaring variable for the litter box which effects all cats in the shelter
+	// Declaring variable for the litter box which effects all cats in the
+	// shelter
 	private int litterBox = 50;
-	
+
 	// Map of pets and attributes
 	Map<String, VirtualPet> shelterPets = new HashMap<String, VirtualPet>();
 
-	//Getter for litter box status
+	// Getter for litter box status
 	public int getLitterBox() {
 		return litterBox;
 	}
-	//Method to take litter box level to 0
+
+	// Method to take litter box level to 0
 	public void cleanLitterBox() {
 		litterBox = 0;
 	}
 
-	//Method to maintain all robotic pets
+	// Method to maintain all robotic pets
 	public void maintainAllRobo() {
 		for (VirtualPet pet : pets()) {
 			if (pet instanceof RoboticPet) {
@@ -29,7 +31,8 @@ public class VirtualPetShelter {
 			}
 		}
 	}
-	//Method to clean all the dog cages
+
+	// Method to clean all the dog cages
 	public void cleanDogCages() {
 		for (VirtualPet pet : pets()) {
 			if (pet instanceof OrgDog) {
@@ -37,7 +40,8 @@ public class VirtualPetShelter {
 			}
 		}
 	}
-	//Method to walk all the dogs (organic and robotic)
+
+	// Method to walk all the dogs (organic and robotic)
 	public void walkDogs() {
 		for (VirtualPet pet : pets()) {
 			if (pet instanceof Dog) {
@@ -46,7 +50,8 @@ public class VirtualPetShelter {
 		}
 
 	}
-	//Methods to intake any type of pet
+
+	// Methods to intake any type of pet
 	public void intake(VirtualPet pet) {
 		shelterPets.put(pet.getName(), (VirtualPet) pet);
 	}
@@ -59,7 +64,7 @@ public class VirtualPetShelter {
 		shelterPets.put(pet.getName(), (VirtualPet) pet);
 	}
 
-	//Method to feed all organic pets
+	// Method to feed all organic pets
 	public void feedAllOrganic() {
 		for (VirtualPet pet : pets()) {
 			if (pet instanceof OrganicPet) {
@@ -68,7 +73,8 @@ public class VirtualPetShelter {
 		}
 		litterBox += 10;
 	}
-	//Method to water all organic pets
+
+	// Method to water all organic pets
 	public void waterAllOrganic() {
 		for (VirtualPet pet : pets()) {
 			if (pet instanceof OrganicPet) {
@@ -78,7 +84,7 @@ public class VirtualPetShelter {
 		litterBox += 10;
 	}
 
-	// Tick method 
+	// Tick method
 	void tickAllPets() {
 		for (VirtualPet pet : pets()) {
 			if (pet instanceof OrgCat) {
